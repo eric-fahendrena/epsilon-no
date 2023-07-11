@@ -1,0 +1,233 @@
+/**
+ * FONT FACES
+ */
+@font-face {
+   font-family: "Abel";
+   src: local("Abel"), url("../fonts/abel-regular.ttf");
+}
+@font-face {
+   font-family: "Afta Sans Thin";
+   src: local("Afta Sans Thin"), url("../fonts/AftaSansThin-Regular.otf");
+}
+@font-face {
+   font-family: "Aileron";
+   src: local("Aileron"), url("../fonts/Aileron-Regular.otf");
+}
+@font-face {
+   font-family: "Aleo";
+   src: local("Aleo"), url("../fonts/Aleo-Regular.otf");
+}
+@font-face {
+   font-family: "Aller";
+   src: local("Aller"), url("../fonts/Aller_Rg.ttf");
+}
+@font-face {
+   font-family: "Amaranth";
+   src: local("Amaranth"), url("../fonts/Amaranth-Regular.otf");
+}
+@font-face {
+   font-family: "Antonio";
+   src: local("Antonio"), url("../fonts/Antonio-Regular.ttf");
+}
+
+/**
+ * STYLES
+ */
+body, html {
+   margin: 0px;
+   font-family: Aileron, Abel;
+   touch-action: auto;
+   user-scalable: no;
+}
+
+p {
+   font-size: 16px;
+   font-weight: 500;
+}
+p:not(.banner p) {
+   padding-left: 15px;
+   padding-right: 15px;
+}
+
+a {
+   font-weight: 500;
+}
+a:not(.nav-link):hover {
+   background-color: #1FC22822;
+   text-decoration: none;
+}
+a:focus {
+   color: #1686E2;
+}
+
+button:focus {
+   outline: none;
+}
+
+.btn {
+   font-size: 1rem;
+   font-weight: 600;
+   padding: 5px 25px;
+   border-radius: 1.2rem;
+}
+
+.show-in {
+   opacity: 0;
+}
+
+.logo {
+   font-weight: 600 !important;
+   font-family: Amaranth, Abel;
+   color: #1BBA37 !important;
+   user-select: 
+}
+
+.navbar {
+   box-shadow: 2px 2px 6px #0001;
+}
+.navbar .nav-link {
+   font-family: Aileron;
+}
+
+.lead {
+   font-family: "Afta Sans Thin", Abel, Helvetica, Arial;
+}
+
+.banner {
+   background-color: transparent !important;
+   background-image: url("../img/web-design-2906159-mobile.jpg");
+   background-size: cover;
+   background-position: center center;
+   min-height: 500px;
+   position: relative;
+}
+.banner .container {
+   position: absolute !important;
+   top: 50%;
+   left: 50%;
+   font-weight: 500;
+   color: white;
+   transform: translate(-50%, -50%);
+}
+.banner .container h1 {
+   font-family: Amaranth, Aller, Arial, Helvetica;
+}
+.banner .container p:not(.lead) {
+   font-family: Abel, Aileron;
+}
+.banner .container .btn {
+   background-color: #00BA05;
+   color: white;
+   font-family: Amaranth;
+}
+.banner .container .btn:hover {
+   background-color: #1CA74C;
+}
+.banner .container .btn:focus {
+   box-shadow: 0 0 0 0.2rem #5EDA8788;
+}
+
+.form-control {
+   border-radius: 1rem;
+}
+
+section .section-title {
+   display: inline-block;
+   font-size: 12px;
+   font-weight: 200;
+   padding: 5px;
+   margin-bottom: 12px;
+   background-color: #00BD40;
+   color: #FFF;
+   font-family: Antonio, Roboto, Arial;
+   text-transform: uppercase;
+}
+section .h3 {
+   font-size: 1.8rem;
+   font-weight: 300;
+   font-family: Aleo;
+   padding-bottom: 12px;
+}
+section img {
+   box-shadow: 1px 1px 2px #0003;
+}
+
+#services .service {
+   margin-bottom: 12px;
+}
+#services .service i {
+   font-size: 4rem;
+   margin-top: 0.8em;
+   margin-bottom: 0.8em;
+}
+#services .service .h4 {
+   font-size: 0.9;
+   font-family: Aileron;
+   font-weight: 400;
+}
+#services .service p {
+   font-size: 1rem;
+}
+
+.card {
+   border-radius: 12px;
+   box-shadow: 2px 2px 12px #0002;
+}
+
+#contact {
+   background-color: #007105;
+   color: white;
+}
+
+#faq .card {
+   box-shadow: 2px 2px 12px #0002;
+   border: none;
+   border-top: 1px solid #42424222;
+   border-radius: 0px;
+}
+#faq .card-header .btn-link {
+   white-space: normal;
+}
+
+footer a {
+   font-weight: 600 !important;
+}
+
+@media (min-width: 768px) {
+   .banner {
+      background-image: web-design-2906159.jpg
+   }
+   .banner .container h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+   }
+   
+   section .h3 {
+      font-size: 3rem;
+   }
+}
+
+/**
+ * ANIMATIONS
+ */
+@keyframes scale-show {
+   0% {
+      transform: scale(0);
+      opacity: 0.0;
+   }
+   50% {
+      opacity: 0.0;
+   }
+   100% {
+      transform: scale(1);
+      opacity: 1.0;
+   }
+}
+
+.scale-show {
+   opacity: 0;
+   animation-delay: 10ms;
+   animation-duration: 500ms;
+   animation-fill-mode: forwards;
+   animation-name: scale-show;
+}
